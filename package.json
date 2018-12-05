@@ -1,6 +1,6 @@
 {
   "name": "high-select",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "custom select element with custom search records and using html in option with custom style.",
   "main": "high-select.js",
   "directories": {
@@ -11,6 +11,11 @@
     "select",
     "webcomponent"
   ],
+  "homepage": "https://github.com/hivabkbk/high-select/blob/master/readme.md",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/hivabkbk/high-select.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

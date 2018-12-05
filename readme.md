@@ -12,7 +12,7 @@ You can use high-select via script tag or node.
 add below tag to your html document
 
 ```html
-<script src='https://unpkg.com/high-select@0.0.2/lib/high-select.js'></script>
+<script src='https://unpkg.com/high-select@0.0.5/lib/high-select.js'></script>
 ```
 
 ### npm
