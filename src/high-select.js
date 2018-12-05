@@ -90,12 +90,11 @@
                 background: var(--input-background, #fff);
             }
     
-            ::slotted(high-option){
+            ::slotted(high-option), high-option{
                 display: block;
                 cursor: pointer;
                 padding: 3px 6px;
-                white-space: nowrap;
-                height: normal;
+                height: auto;
                 line-height: normal;
             }::slotted(high-option[hidden]){
                 display: none;
@@ -253,9 +252,8 @@
             }
         }
 
-        // events
         _onSlotChange(){
-            this.options = this._allOptions();
+            this._initializing();
         }
 
         _onCallerClick(event){
@@ -326,8 +324,6 @@
                         if( isKeyPrintable(event.keyCode) ){
                             this.input.focus();
                             this.expanded = true;
-                        } else {
-                            event.preventDefault();
                         }
                     }
                 break;
@@ -347,7 +343,6 @@
         }
 
 
-        // main methods
         _initializing(){
             const allOptions = this._allOptions();
             if( !this._selectedOption && allOptions.length ) this._firstOption().selected = true;
@@ -426,7 +421,6 @@
         }
 
 
-        // validators
         _isValidOption( option ){
             return option instanceof HighOption && option.tagName.toLowerCase() === 'high-option';
         }
@@ -440,7 +434,6 @@
         }
 
 
-        // option's getters
         _allOptions(){
             return Array.from(this.children);
         }
@@ -602,7 +595,7 @@
         }
 
         get slot(){
-            return this.getAttribute('slot');
+            return this.hasAttribute('slot') ? this.getAttribute('slot') : '';
         }
 
         get content(){
@@ -611,10 +604,10 @@
 
         constructor(){
             super();
-            if( this.slot !== 'option' ) this.slot = '';
         }
 
         connectedCallback(){
+            if( this.slot !== 'option' ) this.slot = '';
             this._upgradeProperty('selected');
             this._upgradeProperty('considered');
             this._upgradeProperty('disabled');
@@ -643,7 +636,10 @@
         }
 
         _haveValidParent(){
-            return this.parentNode.tagName.toLowerCase() === 'high-select' ? true : false;
+            if( this.parentNode )
+                return this.parentNode.tagName.toLowerCase() === 'high-select' ? true : false;
+            else 
+                return false;
         }
     }
     customElements.define('high-option', HighOption);
