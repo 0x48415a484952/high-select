@@ -12,7 +12,7 @@ You can use high-select via script tag or node.
 add below tag to your html document
 
 ```html
-<script src='https://unpkg.com/high-select@0.0.5/lib/high-select.js'></script>
+<script  type="module" src='https://unpkg.com/high-select@0.0.5/lib/high-select.js'></script>
 ```
 
 ### npm
@@ -24,7 +24,7 @@ add below tag to your html document
 once you installed the package, you can add this tag to your html document
 
 ```html
-<script src='node_modules/high-select/lib/high-select.js'></script>
+<script  type="module" src='node_modules/high-select/lib/high-select.js'></script>
 ```
 
 ## Usage
