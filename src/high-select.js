@@ -76,6 +76,10 @@
             :host(:not([search])) #search{
                 display: none;
             }
+
+            #search {
+                line-height: normal;
+            }
     
             #search input[type=text]{
                 outline: var(--input-outline, 0px solid #aaa);
@@ -249,6 +253,8 @@
             if( this.disabled ){
                 this.blur();
                 this.setAttribute('tabindex', '-1');
+            } else {
+                this.setAttribute('tabindex', 0);
             }
         }
 
@@ -256,7 +262,7 @@
             this._initializing();
         }
 
-        _onCallerClick(event){
+        _onCallerClick(){
             this._toggle();
         }
 
