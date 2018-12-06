@@ -14,7 +14,7 @@ You can use `high-select` via script tag or npm.
 add below tag to your html document
 
 ```html
-<script  type="module" src='https://unpkg.com/high-select@0.0.8/lib/high-select.js'></script>
+<script  type="module" src='https://unpkg.com/high-select@0.0.9/lib/high-select.js'></script>
 ```
 
 
