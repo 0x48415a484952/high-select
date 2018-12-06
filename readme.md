@@ -1,47 +1,8 @@
-<!--
-```
-<custom-element-demo>
-  <template>
-    <script  type="module" src='https://unpkg.com/high-select@0.0.6/lib/high-select.js'></script>
-    <high-select search arrow id="language">
-        <high-option value="en" record="ئینگلیزی انگلیسی">English</high-option>
-        <high-option value="ckb" record="کوردی کردی sorani kurdi kurdish">سۆرانی</high-option>
-        <high-option value="far" record="persian farsi ‍پارسی">فارسی</high-option>
-        <high-option value="ar" record="arabic عەرەبی عربی">العربیه</high-option>
-        <high-option value="fra" record="french فەرانسی فرێنچ فرانسە">française</high-option>
-        <high-option value="spa" record="spanish castilian ئیسپانیایی اسپانیایی">español</high-option>
-        <high-option value="tur" record="turkish تورکی ترکی">Türkçe</high-option>
-        <high-option value="por" record="Portuguese پرتغالی پرتەقاڵی">português</high-option>
-        <high-option value="pol" record="polish polszczyzna polski">język polski</high-option>
-        <high-option value="lat" record="lingua latīna">latin</high-option>
-        <high-option value="hbo" record="hebrew Ivrit">עִבְרִית</high-option>
-        <high-option value="gle" record="irish Gaelic">Gaeilge</high-option>
-        <high-option value="ita" record="italiano">italian</high-option>
-        <high-option value="rus" record="russian rússkiy yazýk">русский язык</high-option>
-        <high-option>romanian</high-option>
-        <high-option>catalan</high-option>
-        <high-option>sorbian</high-option>
-        <high-option>greek</high-option>
-        <high-option>german</high-option>
-        <high-option>dutch</high-option>
-        <high-option>hindi</high-option>
-        <high-option>finnish</high-option>
-        <high-option>korean</high-option>
-        <high-option disabled>esperanto</high-option>
-        <high-option>zazaki</high-option>
-        <high-option>ewe</high-option>
-        <high-option>chinese</high-option>
-        <high-option>armenian</high-option>
-        <high-option>afrikaans</high-option>
-    </high-select>
-  </template>
-</custom-element-demo>
-```
--->
-
 # high-select
 
 `high-select` is a custom element looks like classic `select` html element but with more capabilities like putting html tags in its options, customizing search records for any options and customizing its styles.
+
+[Live Demo](https://dictiwa.com/high-select/)
 
 
 ## Installation
@@ -56,6 +17,7 @@ add below tag to your html document
 <script  type="module" src='https://unpkg.com/high-select@0.0.6/lib/high-select.js'></script>
 ```
 
+
 ### npm
 
 ```npm
@@ -68,9 +30,10 @@ once you installed the package, you can add this tag to your html document
 <script  type="module" src='node_modules/high-select/lib/high-select.js'></script>
 ```
 
+
 ## Usage
 
-first, create your high-select tag
+first, create your `high-select` tag
 
 ```html
 <high-select></high-select>
@@ -104,7 +67,7 @@ until you give an `option` a `value` attribute, the option's `innerText` would b
 
 ### default value of select
 
-if you give an option a `selected` attribute, it would be the `high-select` value untill user change it. otherwise the first option would be selected be default.
+if you give an option a `selected` attribute, it would be the `high-select` value untill user change it. otherwise the first option would be selected by default.
 
 ### search
 
@@ -206,6 +169,8 @@ customize `high-select` styles.
 
 ### high-select's HTML structor
 
+![High-select Structure](https://dictiwa.com/high-select/high-select.png)
+
 `high-select` use shadow dom for the most part of itself, so styling it would not be so easy, the structure of its shadow dom is like this:
 
 there is an element with id of `caller`, caller would call the list of options which it is in another element with id `bigot`.
@@ -277,6 +242,13 @@ there is list of css variable that make you able to change the shadow dom's elem
 --input-background
 
 please suggest us if you think there could be more variables needed.
+
+
+## problem and issues
+
+- currently high-select not working properly in iframe and a tranformed container, any idea about how to fix it?
+- edge has issues with display properties of shadow dom elements.
+
  
 ## Contributing
 
