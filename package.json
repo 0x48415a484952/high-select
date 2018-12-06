@@ -1,6 +1,6 @@
 {
   "name": "high-select",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "custom select element with custom search records and using html in option with custom style.",
   "main": "high-select.js",
   "directories": {
