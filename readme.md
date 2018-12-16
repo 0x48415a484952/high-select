@@ -92,7 +92,7 @@ above option would be found one search input of "1", "o", "one", "uno"
 
 ### using html in options
 
-you allowed to use html like images and ... in options, but you must give the option a `title` attribute, so when user select the option, `title` would be shown as selected option.
+you can use any html tags in the high-options tags including img, ... , but you must give the option a `title` attribute, so when user select the option, `title` would be shown as selected option.
 
 ```html
 <high-select search>
@@ -253,9 +253,9 @@ please suggest us if you think there could be more variables needed.
 ## Contributing
 
 1. Fork it!
-2. Create your feature branch: `git checkout -b develope`
+2. Create your feature branch: `git checkout -b new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin develope`
+4. Push to the branch: `git push origin new-feature`
 5. Submit a pull request :D
 
 ## License
